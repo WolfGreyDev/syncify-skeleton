@@ -10,6 +10,7 @@ Syncify's development has gone through some changes on it's major branch. These 
 ## Installation
 
 > Be sure to check out the [official Syncify repo](https://github.com/panoply/syncify/tree/major) for more advanced uses.
+
 > This repo uses a slightly modified version of the Dusk theme also created by panoply.
 
 1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton. Set it to private if it's for a client.
