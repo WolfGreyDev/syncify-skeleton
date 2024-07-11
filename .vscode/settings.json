@@ -1,0 +1,18 @@
+{
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true
+    },
+    "[liquid]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid",
+        "editor.formatOnSave": true
+    },
+    "liquid.completion.sections": true,
+    "liquid.completion.schema": true,
+    "liquid.completion.filters": true,
+    "liquid.completion.objects": true,
+    "liquid.completion.tags": true,
+    "liquid.completion.variables": true,
+    "liquid.completion.properties": true,
+    "liquid.validate.schema": true,
+}
