@@ -1,0 +1,78 @@
+{
+	"name": "your-shopify-store-theme",
+	"author": {
+		"name": "Foo Bar",
+		"email": "foo@example.com",
+		"url": "https://example.com"
+	},
+	"version": "0.0.0",
+	"description": "Theme Description",
+	"homepage": "https://your-shopify-store.com",
+	"scripts": {
+		"dev": "syncify your-shopify-store --theme dev --watch --hot",
+		"build": "syncify --build --prod --clean",
+		"upload": "syncify your-shopify-store --theme dev --upload",
+		"download": "syncify your-shopify-store --theme dev --download"
+	},
+	"syncify": {
+		"stores": {
+			"domain": "your-shopify-store",
+			"themes": {
+				"dev": 1234567890
+			}
+		},
+		"clean": true,
+		"config": {
+			"input": "source",
+			"output": "theme",
+			"paths": {
+				"assets": [
+					"assets/**/*"
+				],
+				"schema": "schema/*.schema",
+				"config": "config/settings_schema.json",
+				"locales": "locales/*.json",
+				"layout": "layout/*.liquid",
+				"templates": "templates/*.json",
+				"customers": "templates/customers/*.liquid"
+			},
+			"views": {
+				"sections": {
+					"prefixDir": true,
+					"separator": "-",
+					"global": [
+						"layout",
+						"shared"
+					]
+				},
+				"snippets": {
+					"prefixDir": true,
+					"separator": "-"
+				}
+			},
+			"transform": {
+				"script": {
+					"assets/[file]": "assets/*.js"
+				},
+				"style": {
+					"assets/[file]": "assets/*.css"
+				},
+				"svg": {
+					"assets/[file]": {
+						"input": "assets/*.svg",
+						"format": "file"
+					}
+				}
+			},
+			"processors": {},
+			"spawn": {}
+		}
+	},
+	"devDependencies": {
+		"@syncify/cli": "github:panoply/syncify#major",
+		"@syncify/turndown": "^0.1.0",
+		"esbuild": "^0.23.0",
+		"svg-sprite": "^2.0.4",
+		"svgo": "^3.3.2"
+	}
+}
