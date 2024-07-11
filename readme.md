@@ -13,7 +13,7 @@ Syncify's development has gone through some changes on it's major branch. These 
 
 > This repo uses a slightly modified version of the Dusk theme also created by panoply.
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton. Set it to private if it's for a client.
+1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton. Set it to private if it's for a client. You can now clone your new repo to your local machine.
 2. Setup your Authorization. See the [official Syncify repo](https://github.com/panoply/syncify/tree/major) for instructions.
     1. Create an app for your store with the appropriate scopes. [Instructions](https://github.com/panoply/syncify?tab=readme-ov-file#setup)
     2. Rename the `.env.example` to `.env` then add your store name and API token to the appropriate places. [Instructions](https://github.com/panoply/syncify?tab=readme-ov-file#credentials)
@@ -29,7 +29,7 @@ Syncify's development has gone through some changes on it's major branch. These 
     > Syncify can export the output directory and zip it with the `-p` or `--package` flags, but this functionality isn't working yet.
 6. Add the theme ID to your `package.json` under `stores.themes.dev`.
     > To get your theme id, customize the theme via the Shopify Theme Editor and copy the theme ID, located in the address bar.
-7. Run `pnpm dev` to start your first live reloading session and open the preview link provided in your terminal. Make a change to your `layout->theme.liquid` and confirm you see your change in your browser.
+7. Run `pnpm dev` to start your first live reloading session and open the preview link provided in your terminal. Make a change to your `/source/layout/theme.liquid` and confirm you see your change in your browser.
 
 ### Notes
 - If you're having issues connecting to your theme, ensure that you've followed the Setup and Credential steps outlined in the [official Syncify repo](https://github.com/panoply/syncify?tab=readme-ov-file#setup). Then check your `.env` file and finally your `package.json` file to make sure everything matches.
