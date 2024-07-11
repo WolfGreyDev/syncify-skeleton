@@ -33,6 +33,7 @@ Syncify's development has gone through some changes on it's major branch. These 
 
 ### Notes
 - If you're having issues connecting to your theme, ensure that you've followed the Setup and Credential steps outlined in the [official Syncify repo](https://github.com/panoply/syncify?tab=readme-ov-file#setup). Then check your `.env` file and finally your `package.json` file to make sure everything matches.
+- If you're using `pnpm dev` and you're unable to hot reload, try changing browsers or disable any browser functionality that may be blocking your websocket connection (eg. Brave Shield). As a last resort, restart you're machine, this has worked for me in the past.
 - I use the VSCode extension [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) and **you should too**. This repo is already set up for your project auto-completions and basic formatting (which you can change). You can customize these settings in the `.liquidrc` file.
 - If you're still having issues, head over to the [Shopify Developers Discord](https://discord.gg/bU3P5TPE) where we have a dedicated channel for Syncify stuff. **Don't be dumb! Complete the application form properly otherwise you'll be banned instantly.**
 
