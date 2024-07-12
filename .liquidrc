@@ -7,97 +7,113 @@
 		"snippets": ["./theme/snippets/*"]
 	},
 	"format": {
+		/*
+			Formatting and beautification is provided by Æsthetic.
+			https://aesthetic.js.org
+			Customize your formatting rules with Moloko.
+			https://moloko.js.org/
+		*/
 		"crlf": false,
-		// "correct": true,
-		"preset": "default",
-		// "language": "liquid",
-		"endNewline": true,
+		/*
+		"correct": false,
+		"language": "liquid",
+		"indentLevel": 0,
+		*/
+		"endNewline": false,
 		"indentChar": "\t",
-		// "indentLevel": 0,
 		"indentSize": 1,
 		"preserveLine": 1,
+		"preset": "default",
 		"wrap": 0,
 		"wrapFraction": 0,
 		"liquid": {
-			"commentNewline": false,
 			"commentIndent": true,
+			"commentNewline": true,
+			"dedentTagList": [],
+			"delimiterPlacement": "force-multiline",
 			"delimiterTrims": "tags",
-			"delimiterPlacement": "consistent",
-			"forceFilter": 3,
 			"forceArgument": 3,
+			"forceFilter": 3,
 			"ignoreTagList": [],
-			"indentAttribute": true,
+			"indentAttribute": false,
 			"lineBreakSeparator": "after",
 			"normalizeSpacing": true,
 			"preserveComment": false,
-			"dedentTagList": [],
-			"quoteConvert": "double"
+			"quoteConvert": "single"
 		},
 		"markup": {
-			"attributeCasing": "lowercase",
-			"attributeSort": false,
-			"commentNewline": true,
-			"commentIndent": true,
+			"attributeCasing": "lowercase-name",
+			"attributeSort": [
+				"id",
+				"class"
+			],
 			"commentDelimiters": "force",
+			"commentIndent": true,
+			"commentNewline": true,
 			"delimiterTerminus": "inline",
-			"forceAttribute": 3,
-			"forceIndent": false,
+			"forceAttribute": true,
+			"forceIndent": true,
 			"ignoreCSS": false,
-			"ignoreJS": true,
+			"ignoreJS": false,
 			"ignoreJSON": false,
-			"lineBreakValue": "align",
+			"lineBreakValue": "preserve",
+			"preserveAttribute": false,
 			"preserveComment": false,
 			"preserveText": false,
-			"preserveAttribute": false,
+			"quoteConvert": "double",
 			"selfCloseSpace": true,
 			"selfCloseSVG": true,
-			"stripAttributeLines": false,
-			"quoteConvert": "none"
+			"stripAttributeLines": true
 		},
 		"json": {
-			"arrayFormat": "default",
-			"braceAllman": false,
-			"bracePadding": false,
-			"objectIndent": "default",
-			"objectSort": false
+			"arrayFormat": "indent",
+			"braceAllman": true,
+			"bracePadding": true,
+			"objectIndent": "indent",
+			"objectSort": true
 		},
 		"style": {
-			"commentIndent": false,
-			"commentNewline": false,
 			"atRuleSpace": true,
-			"classPadding": false,
+			"classPadding": true,
+			"commentIndent": false,
+			"commentNewline": true,
 			"noLeadZero": false,
 			"preserveComment": false,
-			"sortSelectors": false,
-			"sortProperties": false,
-			"quoteConvert": "none"
-		},
-		"script": {
-			"arrayFormat": "default",
-			"braceNewline": false,
-			"bracePadding": false,
-			"braceStyle": "none",
-			"braceAllman": false,
-			"caseSpace": false,
-			"commentIndent": false,
-			"commentNewline": false,
-			"elseNewline": false,
-			"endComma": "never",
-			"functionNameSpace": false,
-			"functionSpace": false,
-			"inlineReturn": true,
-			"methodChain": 4,
-			"neverFlatten": false,
-			"noCaseIndent": false,
-			"noSemicolon": false,
-			"objectSort": false,
-			"objectIndent": "default",
-			"preserveComment": false,
-			"quoteConvert": "none",
-			"styleGuide": "none",
-			"ternaryLine": false,
-			"variableList": "none",
-			"vertical": false
+			"quoteConvert": "double",
+			"sortProperties": true,
+			"sortSelectors": true
 		}
+		/*
+			NOT STABLE YET.
+			Check Æsthetic documentation for more info.
+
+			"script": {
+				"arrayFormat": "default",
+				"braceAllman": false,
+				"braceNewline": false,
+				"bracePadding": false,
+				"braceStyle": "none",
+				"caseSpace": false,
+				"commentIndent": false,
+				"commentNewline": false,
+				"elseNewline": false,
+				"endComma": "never",
+				"functionNameSpace": false,
+				"functionSpace": false,
+				"inlineReturn": true,
+				"methodChain": 4,
+				"neverFlatten": false,
+				"noCaseIndent": false,
+				"noSemicolon": false,
+				"objectIndent": "default",
+				"objectSort": false,
+				"preserveComment": false,
+				"quoteConvert": "none",
+				"styleGuide": "none",
+				"ternaryLine": false,
+				"variableList": "none",
+				"vertical": false
+			}
+		*/
 	}
 }
