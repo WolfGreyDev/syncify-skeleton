@@ -1,7 +1,7 @@
 <!-- replace with your own-->
 # Syncify Skeleton
 
-This repo aims to provide a starting point for your next Shopify theme using [panoply/syncify](https://github.com/panoply/syncify/tree/major).
+This repo aims to provide a starting point for your next Shopify theme using [panoply/syncify](https://github.com/panoply/syncify/tree/rc1).
 
 ## Why this is needed ##
 
