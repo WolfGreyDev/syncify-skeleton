@@ -1,7 +1,7 @@
 <!-- replace with your own-->
 # Syncify Skeleton
 
-This repo aims to provide a starting point for your next Shopify theme using [panoply/syncify](https://github.com/panoply/syncify/tree/rc1).
+This repo aims to provide a starting point for your next Shopify theme using [panoply/syncify](https://github.com/panoply/syncify).
 
 ## Why this is needed ##
 
@@ -9,18 +9,18 @@ Syncify's development has gone through some changes on it's major branch. These 
 
 ## Installation
 
-> Be sure to check out the [official Syncify repo](https://github.com/panoply/syncify/tree/rc1) for more advanced uses.
+> Be sure to check out the [official Syncify repo](https://github.com/panoply/syncify) for more advanced uses.
 
 > This repo uses a slightly modified version of the Dusk theme also created by panoply.
 
 1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton. Set it to private if it's for a client. You can now clone your new repo to your local machine.
-2. Setup your Authorization. See the [official Syncify repo](https://github.com/panoply/syncify/tree/rc1) for instructions.
+2. Setup your Authorization. See the [official Syncify repo](https://github.com/panoply/syncify) for instructions.
     1. Create an app for your store with the appropriate scopes. [Instructions](https://github.com/panoply/syncify?tab=readme-ov-file#setup)
     2. Rename the `.env.example` to `.env` then add your store name and API token to the appropriate places. [Instructions](https://github.com/panoply/syncify?tab=readme-ov-file#credentials)
     3. In your `package.json`, replace all `your-shopify-store` references with the Shopify store name you set in your `.env` file.
 3. Run `pnpm i` to quick install Syncify dependencies. Below is an itemized list.
-    * `pnpm add github:panoply/syncify#rc1 -D` to install the rc1 branch.
-    * (Optional) `pnpm add svgo -D` and `pnpm add svg-sprite -D` to handle SVG's, the logo in this case.
+    * `pnpm add github:panoply/syncify -D` to install the rc1 branch.
+    * (Optional) `pnpm add svgo -D` to handle SVG's, the logo in this case.
 4. Run `pnpm build`. This will create a new directory called `theme` in the standard Shopify theme structure.
 5. Package the `theme` folder and manually upload the `.zip` file to your store.
     * On Mac, navigate to the project folder, right click on the `theme` folder and select `compress "theme"`.
