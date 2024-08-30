@@ -5,7 +5,7 @@ This repo aims to provide a starting point for your next Shopify theme using [pa
 
 ## Why this is needed ##
 
-Syncify's development has gone through some changes on it's major branch. These changes have left some of the documentation outdated, in particular the initial setup stage. I've worked with [panoply](https://github.com/panoply) (Sissel) on the Shopify Developers Discord to get Syncify working using the "best" undocumented method.
+Syncify's development has gone through some changes and these changes have left some of the documentation outdated, in particular the initial setup stage. I've worked with [panoply](https://github.com/panoply) (Sissel) on the Shopify Developers Discord to get Syncify working using the "best" undocumented method.
 
 ## Installation
 
@@ -19,7 +19,7 @@ Syncify's development has gone through some changes on it's major branch. These 
     2. Rename the `.env.example` to `.env` then add your store name and API token to the appropriate places. [Instructions](https://github.com/panoply/syncify?tab=readme-ov-file#credentials)
     3. In your `package.json`, replace all `your-shopify-store` references with the Shopify store name you set in your `.env` file.
 3. Run `pnpm i` to quick install Syncify dependencies. Below is an itemized list.
-    * `pnpm add github:panoply/syncify -D` to install the rc1 branch.
+    * `pnpm add github:panoply/syncify -D` (branch is no longer needed).
     * (Optional) `pnpm add svgo -D` to handle SVG's, the logo in this case.
 4. Run `pnpm build`. This will create a new directory called `theme` in the standard Shopify theme structure.
 5. Package the `theme` folder and manually upload the `.zip` file to your store.
