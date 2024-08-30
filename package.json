@@ -69,8 +69,7 @@
 		}
 	},
 	"devDependencies": {
-		"@syncify/cli": "github:panoply/syncify#rc1",
-		"svg-sprite": "^2.0.4",
+		"@syncify/cli": "github:panoply/syncify",
 		"svgo": "^3.3.2"
 	}
 }
