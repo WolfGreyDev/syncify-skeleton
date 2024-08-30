@@ -2,9 +2,13 @@
 	"engine": "shopify",
 	"files": {
 		"locales": "./theme/locales/en.default.json",
-		"sections": ["./theme/sections/*"],
+		"sections": [
+			"./theme/sections/*"
+		],
 		"settings": "./source/config/settings_schema.json",
-		"snippets": ["./theme/snippets/*"]
+		"snippets": [
+			"./theme/snippets/*"
+		]
 	},
 	"format": {
 		/*
@@ -14,12 +18,11 @@
 			https://moloko.js.org/
 		*/
 		"crlf": false,
-		/*
-		"correct": false,
+		"correct": true,
 		"language": "liquid",
 		"indentLevel": 0,
-		*/
 		"endNewline": false,
+		"ignore": [],
 		"indentChar": "\t",
 		"indentSize": 1,
 		"preserveLine": 1,
@@ -34,8 +37,10 @@
 			"delimiterTrims": "tags",
 			"forceArgument": 3,
 			"forceFilter": 3,
-			"ignoreTagList": [],
-			"indentAttribute": false,
+			"ignoreTagList": [
+				"schema"
+			],
+			"indentAttribute": true,
 			"lineBreakSeparator": "after",
 			"normalizeSpacing": true,
 			"preserveComment": false,
@@ -51,7 +56,7 @@
 			"commentIndent": true,
 			"commentNewline": true,
 			"delimiterTerminus": "inline",
-			"forceAttribute": true,
+			"forceAttribute": 3,
 			"forceIndent": true,
 			"ignoreCSS": false,
 			"ignoreJS": false,
@@ -75,7 +80,7 @@
 		"style": {
 			"atRuleSpace": true,
 			"classPadding": true,
-			"commentIndent": false,
+			"commentIndent": true,
 			"commentNewline": true,
 			"noLeadZero": false,
 			"preserveComment": false,
