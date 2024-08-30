@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="ie=edge" http-equiv="x-ua-compatible" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+
+		<title>
+			{{ page_title }}
+		</title>
+
+		<style>
+			{{ settings.body_font | font_face }}
+		</style>
+
+		{{ 'style.css' | asset_url | stylesheet_tag }}
+
+		{{ content_for_header }}
+	</head>
+
+	<body>
+
+		<header>
+			<div>
+				<h1>
+					{%- if settings.currency_code_enabled -%}
+						{{ gift_card.balance | money_with_currency }}
+					{%- else -%}
+						{{ gift_card.balance | money }}
+					{%- endif -%}
+				</h1>
+				{%- if gift_card.enabled == false or gift_card.expired -%}
+					<p>
+						{{ 'gift_cards.issued.expired' | t }}
+					</p>
+				{%- endif -%}
+			</div>
+			{%- if gift_card.expires_on -%}
+				{%- assign gift_card_expiration_date = gift_card.expires_on | date: '%B %e, %Y' -%}
+				<p>
+					{{ 'gift_cards.issued.expiration_date' | t: expires_on: gift_card_expiration_date }}
+				</p>
+			{%- endif -%}
+		</header>
+
+		<main>
+			<div>
+				{%- if settings.logo != blank -%}
+					{%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+					{{ settings.logo | image_url: width: 570 | image_tag: alt: logo_alt }}
+				{%- else -%}
+					<img
+						class=""
+						alt=""
+						height="{{ 570 | divided_by: 1.5 }}"
+						loading="eager"
+						src="{{ 'gift-card/card.svg' | shopify_asset_url }}"
+						width="570" />
+				{%- endif -%}
+			</div>
+			<h2>
+				{{ shop.name }}
+			</h2>
+			<div>
+				<p>
+					{{ 'gift_cards.issued.how_to_use_gift_card' | t }}
+				</p>
+			</div>
+			<p>
+				{{ gift_card.code | format_code }}
+			</p>
+			{%- if gift_card.pass_url -%}
+				<a href="{{ gift_card.pass_url }}">
+					<img
+						alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}"
+						height="40"
+						loading="lazy"
+						src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}"
+						width="120" />
+				</a>
+			{%- endif -%}
+		</main>
+	</body>
+</html>
